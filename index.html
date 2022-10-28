@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kraina Smoków</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="sec1">
+        <nav>
+            <ul>
+                <li><a href="#sec2">Opis</a></li>
+                <li> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
+                <li><a href="#sec3">Fabuła</a></li>
+                <li> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
+                <li><a href="#sec4">Mapa</a></li>
+                <li> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
+                <li><a href="#sec5">Autorzy</a></li>
+                <li> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
+                <li><a href="#sec6">Kontakt</a></li>
+                <li> &nbsp;&nbsp;|&nbsp;&nbsp; </li>
+                <li><a href="#sec7">Sklep</a></li>
+            </ul>
+        </nav>
+        <h1>
+            Kraina Smoków
+        </h1>
+    </section>
+    
+    <section id="sec2">
+        <p>
+            Jest to kooperacyjna gra fantasy zotwartym światem a także z wieloma ciekawymi miejscami i niespodziankami. Można grać samemu lub z przyjaciółmi, odwiedzać najdalsze zakątki krainy <i>Magiclake</i>, pokonywać naróżniejszych przeciwników lub rozwiązywać rozmaite zagadki starego świata. Dołącz już teraz i przekonaj się sam.
+        </p>
+    </section>
+    
+    <section id="sec3">
+        <p>
+            Akcja rozgrywa się w odległej krainie <i><b>Magiclake</b></i>. Jest to piękna, baśniowa kraina z jeszcze piękniejszymi stworzeniami, jednak ostatnio dzieje się coś dziwnego - rośliny zaczęły więdnąć, zwierzęta uciekać a niebo zakryło się gęstą mgłą. Spowodował to powrót <i><b>Ravoka</b></i> - pradawnego władcy smoków oraz jego armi potworów. Razem z przyjaciółmi wcielasz się w grupę bohaterów postanawijących pokonać go raz na dobre i przywrócić spokój w tej bajecznej krainie.
+        </p>
+    </section>
+    
+    <section id="sec4">
+    </section>
+    
+    <section id="sec5">
+        <div>
+            <img src="mezcyzna1.jpg" alt="zdjecie autora 1">
+            <div class="inn">
+                <h2>Antoni Kowalski</h2>
+                <p class="info">
+                    Urodzony 1980 roku, pomysłodawca, główny programista. Były pracownik Supercell, lubi uprawiać sport a zwłaszcza pływać. Ma żonę i dwójkę dzieci.
+                </p>
+            </div>
+        </div>
+        <div>
+            <img src="kobieta.jpg" alt="zdjecie autora 2">
+            <div class="inn">
+                <h2>Małgorzata Bieniak</h2>
+                <p class="info">
+                    Urodzona 1994 roku, główny grafik, absolwentka Politechniki Łódzkiej, gra jako wiolonczelistka w Operze Warszawskiej.
+                </p>
+            </div>
+        </div>
+        <div>
+            <img src="mezcyzna2.jpg" alt="zdjecie autora 3">
+            <div class="inn">
+                <h2>Jan Nowak</h2>
+                <p class="info">
+                    Urodzony 1991 roku, szef kampani marketingowej i działu promocyjnego. Absolwent Uniwersytetu Jagiellońskiego. Lubi trenować lekkoatletykę, ma żonę i córkę.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sec6">
+        <div id="contact1">
+            <h3>Kontakt</h3>
+            <h4>Adres Pocztowy</h4>
+            <p class="info2">
+                Blue Owl Studio <br>
+                32-291 Łódź <br>
+                ul. Powstańca 12
+            </p>
+            <h4>Adres email</h4>
+            <p class="info2">
+                kontakt@krainasmokow.com
+            </p>
+            <h4>Telefon</h4>
+            <p class="info2">
+                48 919-291-325
+            </p>
+        </div>
+        <div id="contact2">
+                <input name="name" type="text" placeholder="imie:" class="name" id="name">
+                <input name="lastname" type="text" placeholder="nazwisko:" class="name" id="lastname">
+                <br>
+                <input name="mail" type="email" placeholder="Adres email:" id="mail">
+                <br>
+                <textarea name="msg" id="msg" placeholder="Treść wiadomości"></textarea>
+                <button id="btn">WYŚLIJ</button>
+        </div>
+        <div id="social">
+            <p id="socials">Znajdź nas na:</p>
+            <ul>
+                <li class="logos"><a href="https://www.snapchat.com/" target="_blank"><img src="snap.png" alt="logo youtube" class="logo"></a></li>
+                <li class="logos"><a href="https://www.youtube.com/" target="_blank"><img src="yt.png" alt="logo youtube" class="logo"></a></li>
+                <li class="logos"><a href="https://www.tiktok.com/" target="_blank"><img src="tiktok.png" alt="logo youtube" class="logo"></a></li>
+                <li class="logos"><a href="https://www.instagram.com/" target="_blank"><img src="insta.png" alt="logo youtube" class="logo"></a></li>
+                <li class="logos"><a href="https://www.facebook.com/" target="_blank"><img src="face.png" alt="logo youtube" class="logo"></a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="sec7">
+        <img src="buda.png" id="construct">
+    </section>
+    
+    <script>
+        const btn = document.getElementById('btn');
+        let name = '';
+        let lastname = '';
+        let mail = '';
+        let msg = '';
+        let qeue = [];
+
+        function addmsg()
+        {
+            name = document.getElementById('name').value;
+            lastname = document.getElementById('lastname').value;
+            mail = document.getElementById('mail').value;
+            msg = document.getElementById('msg').value;
+
+            let newmsg = [name, lastname, mail, msg];
+            qeue.push(newmsg);
+            console.log(qeue);
+
+            document.getElementById('name').value = '';
+            document.getElementById('lastname').value = '';
+            document.getElementById('mail').value = '';
+            document.getElementById('msg').value = '';
+        }
+
+        btn.addEventListener('click', addmsg);
+    </script>
+</body>
+</html>
